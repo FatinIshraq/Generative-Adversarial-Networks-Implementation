@@ -1,6 +1,7 @@
 # Generative Adversarial Networks — Vanilla GAN · LSGAN · DCGAN
 
-<img width="478" height="343" alt="image" src="https://github.com/user-attachments/assets/631c5fbd-08aa-4c02-8360-e380292b6c28" />
+<img width="1062" height="449" alt="image" src="https://github.com/user-attachments/assets/3c3d4ff4-41e5-4595-a5d3-2f6d53568334" />
+<img width="478" height="343" alt="image" src="https://github.com/user-attachments/assets/46fc982b-3550-4035-9d92-82e37e1b5801" />
 
 
 ![Python](https://img.shields.io/badge/Python-3.8+-blue?logo=python&logoColor=white)
@@ -48,8 +49,7 @@ Discriminator (1,102,721 params)
              → Flatten → Dense(1024) → LeakyReLU → Dense(1)
 
 Generator (6,595,521 params)
-  Input(96)  → Dense(1024)    → ReLU → BatchNorm
-             → Dense(7×7×128) → ReLU → BatchNorm → Reshape(7,7,128)
+  Input(96)  → Dense(1024)    → ReLU → BatchNorm → Reshape(7,7,128)
              → ConvTranspose(64, 4×4, s=2) → ReLU → BatchNorm
              → ConvTranspose(1,  4×4, s=2) → Tanh
 ```
@@ -84,7 +84,7 @@ LSGAN addresses vanishing gradients by penalizing samples based on their distanc
 | Optimizer | Adam (lr=1e-3, β₁=0.5) |
 | Image preprocessing | Scale to [−1, 1] |
 
-Separate optimizers for Generator and Discriminator. Custom `tf.GradientTape` training loop — no `model.fit()`.
+Custom `tf.GradientTape` training loop with separate optimizers for Generator and Discriminator.
 
 ---
 
@@ -94,13 +94,8 @@ Separate optimizers for Generator and Discriminator. Custom `tf.GradientTape` tr
 Generative-Adversarial-Networks-Implementation/
 ├── notebook/
 │   └── gan_implementation.ipynb   # Full implementation: Vanilla GAN → LSGAN → DCGAN
-├── src/
-│   ├── models.py                  # discriminator() and generator() definitions
-│   ├── losses.py                  # BCE and LSGAN loss functions
-│   ├── train.py                   # run_a_gan() training loop
-│   └── utils.py                   # show_images(), preprocess_img(), count_params()
 ├── results/
-│   └── samples/                   # Generated image grids per epoch
+│   └── samples/                   # Generated image grids (add your output images here)
 ├── requirements.txt
 └── README.md
 ```
@@ -116,23 +111,16 @@ pip install -r requirements.txt
 jupyter notebook notebook/gan_implementation.ipynb
 ```
 
-**requirements.txt**
-```
-tensorflow>=2.8
-numpy
-matplotlib
-```
-
 ---
 
 ## Key Concepts Demonstrated
 
 - Minimax adversarial training with separate `GradientTape` passes per network
 - Leaky ReLU in discriminator to prevent dead neurons
-- Tanh output activation with `[−1, 1]` image normalization
+- Tanh output with `[−1, 1]` image normalization
 - BatchNormalization in DCGAN generator for training stability
-- LSGAN vs BCE loss: gradient behavior comparison
-- Spatial upsampling via `Conv2DTranspose` (DCGAN generator)
+- LSGAN vs BCE: gradient behavior comparison
+- Spatial upsampling via `Conv2DTranspose`
 - Parameter count verification for reproducibility
 
 ---
@@ -142,7 +130,7 @@ matplotlib
 - [x] Vanilla GAN (MNIST, FC)
 - [x] LSGAN (Least Squares loss variant)
 - [x] DCGAN (Convolutional architecture)
-- [ ] Conditional GAN (cGAN) — class-conditioned generation
+- [ ] Conditional GAN (cGAN)
 - [ ] Training curves & FID score logging
 - [ ] CIFAR-10 extension
 
