@@ -151,7 +151,6 @@ matplotlib
 
 ## Author
 
-**Fatin Ishraq** | M.S. Computer Engineering, University of Maine  
-Research: Precision Agriculture · Computer Vision · Generative Models
+**Fatin Ishraq** 
 
 [![GitHub](https://img.shields.io/badge/GitHub-FatinIshraq-black?logo=github)](https://github.com/FatinIshraq)
