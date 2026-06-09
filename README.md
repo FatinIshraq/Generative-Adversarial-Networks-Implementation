@@ -1,6 +1,7 @@
 # Generative Adversarial Networks — Vanilla GAN · LSGAN · DCGAN
 
-<img width="1062" height="449" alt="image" src="https://github.com/user-attachments/assets/3c3d4ff4-41e5-4595-a5d3-2f6d53568334" />
+<img width="642" height="273" alt="image" src="https://github.com/user-attachments/assets/01d14726-c46d-4453-853d-8f178ba5b80c" />
+
 <img width="478" height="343" alt="image" src="https://github.com/user-attachments/assets/46fc982b-3550-4035-9d92-82e37e1b5801" />
 
 
@@ -95,7 +96,9 @@ Generative-Adversarial-Networks-Implementation/
 ├── notebook/
 │   └── gan_implementation.ipynb   # Full implementation: Vanilla GAN → LSGAN → DCGAN
 ├── results/
-│   └── samples/                   # Generated image grids (add your output images here)
+│   ├── Picture1 (After 10 epochs).png
+│   └── Picture2 (After 12 epochs).png
+├── .gitignore
 ├── requirements.txt
 └── README.md
 ```
