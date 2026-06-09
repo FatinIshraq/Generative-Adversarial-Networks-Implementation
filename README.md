@@ -10,7 +10,7 @@
 ![Dataset](https://img.shields.io/badge/Dataset-MNIST-lightgrey)
 ![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
 
-Three GAN architectures implemented from scratch in TensorFlow on MNIST — progressing from a fully-connected baseline to a convolutional architecture, with two loss formulations compared side-by-side.
+Three GAN architectures implemented from scratch in TensorFlow on MNIST - progressing from a fully-connected baseline to a convolutional architecture, with two loss formulations compared side-by-side.
 
 ---
 
