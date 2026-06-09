@@ -1,7 +1,6 @@
 # Generative Adversarial Networks — Vanilla GAN · LSGAN · DCGAN
 
 <img width="478" height="343" alt="image" src="https://github.com/user-attachments/assets/631c5fbd-08aa-4c02-8360-e380292b6c28" />
-<img width="926" height="405" alt="image" src="https://github.com/user-attachments/assets/ef0d336e-3818-47eb-84ff-6eb76ba26284" />
 
 
 ![Python](https://img.shields.io/badge/Python-3.8+-blue?logo=python&logoColor=white)
